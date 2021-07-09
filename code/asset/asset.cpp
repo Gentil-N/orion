@@ -1,6 +1,6 @@
 #include "asset.hpp"
 
-#include "../external/assimp.hpp"
+#include "../../external/assimp.hpp"
 #include "stb_image.h"
 #include "minimp3_ex.h"
 
