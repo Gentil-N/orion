@@ -5,7 +5,7 @@ project(orion)
 set(CMAKE_C_STANDARD 11)
 set(CMAKE_CXX_STANDARD 20)
 
-set(ORN_SRC_DIR  ${PROJECT_SOURCE_DIR})
+set(ORN_SRC_DIR  ${PROJECT_SOURCE_DIR}/code)
 set(ORN_SRC_FILES    ${ORN_SRC_DIR}/asset/asset.cpp
                      ${ORN_SRC_DIR}/asset/stb_image.c
                      ${ORN_SRC_DIR}/asset/minimp3.c
