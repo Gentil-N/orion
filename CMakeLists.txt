@@ -14,6 +14,8 @@ set(ORN_SRC_FILES    ${ORN_SRC_DIR}/asset/asset.cpp
 
 set(BUILD_SHARED_LIBS_SAVED "${BUILD_SHARED_LIBS}")
 set(BUILD_STATIC_LIBS_SAVED "${BUILD_STATIC_LIBS}")
+set(ASSIMP_BUILD_TESTS OFF)
+add_subdirectory(external/assimp)
 set(BUILD_SHARED_LIBS OFF)
 set(BUILD_STATIC_LIBS ON)
 add_subdirectory(external/glm)
@@ -21,10 +23,6 @@ add_subdirectory(external/glfw)
 add_subdirectory(external/spdlog)
 add_subdirectory(external/vulkan-headers)
 add_subdirectory(external/entt)
-set(BUILD_SHARED_LIBS "${BUILD_SHARED_LIBS_SAVED}")
-set(BUILD_STATIC_LIBS "${BUILD_STATIC_LIBS_SAVED}")
-set(ASSIMP_BUILD_TESTS OFF)
-add_subdirectory(external/assimp)
 
 find_library(OPENAL_LIB openal)
 if(NOT OPENAL_LIB)
@@ -42,3 +40,5 @@ else()
 endif()
 
 target_link_libraries(orion glfw assimp glm spdlog ${OPENAL_LIB} ${CMAKE_DL_LIBS} ${CMAKE_THREAD_LIBS_INIT})
+
+target_include_directories(orion PUBLIC ${PROJECT_SOURCE_DIR}/external/vulkan-headers/include)
