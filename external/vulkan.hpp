@@ -11,4 +11,7 @@
 
 #include "vulkan-headers/include/vulkan/vulkan.h"
 
+#define VULKAN_HPP_DISPATCH_LOADER_DYNAMIC 1
+#include "vulkan-headers/include/vulkan/vulkan.hpp"
+
 #endif //__VULKAN_HPP__
