@@ -7,6 +7,7 @@
 #include "../external/spdlog.hpp"
 #include "../external/glm.hpp"
 #include "../external/entt.hpp"
+#include "../external/vulkan.hpp"
 #include "asset/asset.hpp"
 #include "desktop/desktop.hpp"
 #include "sound/sound.hpp"
